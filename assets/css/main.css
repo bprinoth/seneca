@@ -85,7 +85,7 @@ input, select, textarea {
 	html {
 		background-color: #313a3d;
 		background-attachment: fixed,						fixed;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-image: url("images/bg.jpg"), url("../../images/bg.jpg");
 		background-position: top left,					center center;
 		background-repeat: repeat,						none;
 		background-size: auto,						cover;
@@ -135,7 +135,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent !important;
-			color: #8cd1a8 !important;
+			color: #ffffff !important;
 			text-decoration: none;
 		}
 
@@ -259,7 +259,7 @@ input, select, textarea {
 	.container {
 		margin: 0 auto;
 		max-width: calc(100% - 4em);
-		width: 35em;
+		width: 66%;
 	}
 
 		.container.xsmall {
@@ -1954,14 +1954,16 @@ input, select, textarea {
 
 	header.major {
 		text-align: center;
+		color: black;
 	}
 
 		header.major h1, header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
 			position: relative;
+			color: black;
 		}
 
 			header.major h1:after, header.major h2:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
-				background: #dddddd;
+				background: #000000;
 				content: '';
 				display: block;
 				height: 2px;
@@ -2225,7 +2227,7 @@ input, select, textarea {
 	}
 
 		.image:before {
-			background: url("images/overlay.png");
+			background: url("images/bg.png");
 			content: '';
 			display: block;
 			height: 100%;
@@ -2657,7 +2659,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #8cd1a8;
+			background-color: #000000;
 			border: 0;
 			box-shadow: none;
 			color: #ffffff !important;
@@ -2739,7 +2741,8 @@ input, select, textarea {
 
 		.main .container {
 			padding: 5em 2.5em 8em 2.5em ;
-			background: rgba(255, 255, 255, 0.95);
+			background: rgba(255, 255, 255, 0.579);
+			color: black;
 			box-shadow: inset 0 1px 0 0 #dddddd;
 		}
 
@@ -2754,8 +2757,8 @@ input, select, textarea {
 			.main .container .content {
 				display: inline-block;
 				margin-right: 1px;
-				vertical-align: middle;
-				width: calc(100% - 10px);
+				vertical-align: top;
+				width: 90%;
 			}
 
 		.main .goto-next {
@@ -2837,12 +2840,14 @@ input, select, textarea {
 			}
 
 		#header .container {
-			background: rgba(255, 255, 255, 0.95);
-			bottom: 0;
-			left: 50%;
-			margin-left: -17.5em;
-			padding: 2.5em;
+			background: rgba(0, 0, 0, 0);
+			display: inline-block;
+			margin-right: 1px;
 			position: absolute;
+			top: 90%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 66%;
 		}
 
 			#header .container > :last-child {
@@ -2851,6 +2856,52 @@ input, select, textarea {
 
 			#header .container .button {
 				min-width: 12em;
+			}
+
+		#header .more {
+				-moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease;
+				-webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
+				-ms-transition: -ms-transform 0.75s ease, opacity 0.75s ease;
+				transition: transform 0.75s ease, opacity 0.75s ease;
+				-moz-transition-delay: 3.5s;
+				-webkit-transition-delay: 3.5s;
+				-ms-transition-delay: 3.5s;
+				transition-delay: 3.5s;
+				-moz-transform: translateY(0);
+				-webkit-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+				border: none;
+				bottom: 0;
+				color: inherit;
+				font-size: 0.8em;
+				height: 8.5em;
+				left: 50%;
+				letter-spacing: 0.225em;
+				margin-left: -8.5em;
+				opacity: 1;
+				outline: 0;
+				padding-left: 0.225em;
+				position: absolute;
+				text-align: center;
+				text-transform: uppercase;
+				width: 16em;
+				z-index: 1;
+			}
+
+		#header .more:after {
+				background-image: url("images/arrow.svg");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				bottom: 4em;
+				content: '';
+				display: block;
+				height: 1.5em;
+				left: 50%;
+				margin: 0 0 0 -0.75em;
+				position: absolute;
+				width: 1.5em;
 			}
 
 /* Footer */
